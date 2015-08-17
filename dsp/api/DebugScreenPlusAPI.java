@@ -1,3 +1,4 @@
+
 package dsp.api;
 
 import java.util.Hashtable;
@@ -11,9 +12,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.EnumChatFormatting;
-import net.minecraft.util.MathHelper;
 import net.minecraft.util.MovingObjectPosition;
-import net.minecraft.util.Vec3;
 import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 
@@ -44,6 +43,10 @@ public class DebugScreenPlusAPI {
 		MinecraftForge.EVENT_BUS.post(new EventRegisterModule(module, modid));
 	}
 	
+	
+	public static void addPageToExistingCategory(String pageName, String categoryName){
+		MinecraftForge.EVENT_BUS.post(new EventAddPageToCategory(pageName, categoryName));
+	}
 	/**
 	 * Fancy string.
 	 * @param b Value

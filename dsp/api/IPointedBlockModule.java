@@ -6,6 +6,6 @@ import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 
 public interface IPointedBlockModule extends IModule{
-	public void addBlockInfo(EntityPlayer player, Block block, List<String> left, List<String> right);
+	public void addBlockInfo(EntityPlayer player, Block block, List<String> left, List<String> right, String pagename);
 
 }
